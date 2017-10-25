@@ -104,5 +104,14 @@ class DuckietownEnv(gym.Env):
 
         # TODO: draw to a texture and display
         # Note: pyglet may have utils for this
+        #
+        #class ImageData(width, height, format, data, pitch=None)
+        #img.blit(x, y, z, width, height)
+        # From numpy array to bytes: .astype('uint8').data.__str__()
+
+
+
+
+
 
         self.window.flip()
