@@ -3,7 +3,8 @@
 from __future__ import division, print_function
 
 import gym
-import gym_duckietown
+
+from gym_duckietown.envs import DuckietownEnv
 import pyglet
 
 def main():
@@ -19,16 +20,18 @@ def main():
         action = None
         if symbol == key.LEFT:
             print('left')
-            action = 0
+            action = (-1, 1)
         elif symbol == key.RIGHT:
             print('right')
-            action = 1
+            action = (1, -1)
         elif symbol == key.UP:
             print('forward')
-            action = 2
+            action = (1, 1)
         elif symbol == key.DOWN:
             print('back')
-            action = 3
+            action = (-1, -1)
+        elif symbol == key.ESCAPE:
+            return
 
         obs, reward, done, info = env.step(action)
 
