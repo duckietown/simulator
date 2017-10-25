@@ -82,7 +82,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>18 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -100,7 +100,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>18 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -123,7 +123,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -141,7 +141,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -164,7 +164,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -182,7 +182,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -205,7 +205,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -223,7 +223,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -246,7 +246,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -264,7 +264,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -287,7 +287,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -305,7 +305,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -328,7 +328,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -346,7 +346,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -369,7 +369,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -387,7 +387,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -410,7 +410,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -428,7 +428,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -451,7 +451,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -469,7 +469,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -492,7 +492,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -510,7 +510,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -533,7 +533,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -551,7 +551,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -574,7 +574,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -592,7 +592,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -615,7 +615,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -633,7 +633,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
@@ -656,7 +656,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -674,7 +674,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>6 2 0.001</size>
+              <size>0.5 0.5 0.01</size>
             </box>
           </geometry>
           <material>
