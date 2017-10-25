@@ -9,10 +9,6 @@ import zmq
 # Rendering window size
 WINDOW_SIZE = 512
 
-# Camera image size
-CAMERA_WIDTH = 80
-CAMERA_HEIGHT = 80
-
 class DuckietownEnv(gym.Env):
     """
     OpenAI gym environment wrapper for the Duckietown simulation.
@@ -23,6 +19,13 @@ class DuckietownEnv(gym.Env):
         'render.modes': ['human', 'rgb_array'],
         'video.frames_per_second' : 30
     }
+
+    # Camera image size
+    CAMERA_WIDTH = 100
+    CAMERA_HEIGHT = 100
+
+    # Camera image shape
+    IMG_SHAPE = (CAMERA_WIDTH, CAMERA_HEIGHT, 3)
 
     def __init__(self):
         # For rendering
@@ -39,7 +42,7 @@ class DuckietownEnv(gym.Env):
         self.observation_space = spaces.Box(
             low=0,
             high=255,
-            shape=(CAMERA_WIDTH, CAMERA_HEIGHT, 3)
+            shape=DuckietownEnv.IMG_SHAPE
         )
 
         self.reward_range = (-1, 1000)
@@ -71,6 +74,8 @@ class DuckietownEnv(gym.Env):
         return [seed]
 
     def _step(self, action):
+        assert isinstance(action, tuple) and len(action) == 2
+
         self.stepCount += 1
 
         reward = 0
@@ -99,5 +104,14 @@ class DuckietownEnv(gym.Env):
 
         # TODO: draw to a texture and display
         # Note: pyglet may have utils for this
+        #
+        #class ImageData(width, height, format, data, pitch=None)
+        #img.blit(x, y, z, width, height)
+        # From numpy array to bytes: .astype('uint8').data.__str__()
+
+
+
+
+
 
         self.window.flip()
