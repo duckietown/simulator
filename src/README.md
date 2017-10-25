@@ -25,7 +25,7 @@ angular:
   
 **NOTE:  To build successfully, maybe you need to install a lot ros packages. Based on the error message, use ```sudo apt-get install ros-kinetic-packagename```.**
 
-
+**Run ```sudo apt-get install python-catkin-tools``` to get the catkin command.**
 
 
 
