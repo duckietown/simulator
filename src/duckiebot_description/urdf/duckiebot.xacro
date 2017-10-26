@@ -176,7 +176,7 @@
     <pose>0 0 0 0 0 0</pose>
 
     <collision>
-      <origin xyz="0 -0.2 -0.7" rpy="0 0 0"/>
+      <origin xyz="-0.05 0 -0.055" rpy="0 -0.1 0"/>
       <geometry>
         <mesh filename="package://duckiebot_description/meshes/duckiebot_camera.dae"/>
       </geometry>
@@ -184,7 +184,7 @@
 
 
     <visual name='camvisual'>
-      <origin xyz="0 -0.2 -0.7" rpy=" 0 0 0"/>
+      <origin xyz="-0.05 0 -0.055" rpy=" 0 -0.1 0"/>
       <geometry>
         <mesh filename="package://duckiebot_description/meshes/duckiebot_camera.dae"/>
       </geometry>
@@ -198,9 +198,10 @@
     </inertial>
   </link>
 
+<!-- This joint info decides the pos of camera. Pitch(p in rpy) is angle to control orientation for duckiebot camera.After change values here, you need to change the pos info in collision part anf visual part just above.-->
   <joint name="camera_joint" type="fixed">
     <axis xyz="0 0 0" />
-    <origin xyz="0 0.2 0.7" rpy="0 0 0"/>
+    <origin xyz="0.05 0 0.05" rpy="0 0.1 0"/> 
     <parent link="chassis"/>
     <child link="camera"/>
   </joint>

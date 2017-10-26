@@ -5,7 +5,7 @@
       <collision name="collision">
         <geometry>
           <mesh>
-          <scale>0.3 0.3 0.3</scale>
+          <scale>0.8333 0.8333 0.8333</scale>
             <uri>model://gazebo_duck/meshes/duck.dae</uri>
           </mesh>
         </geometry>
@@ -13,7 +13,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-          <scale>0.3 0.3 0.3</scale>
+          <scale>0.8333 0.8333 0.8333</scale>
             <uri>model://gazebo_duck/meshes/duck.dae</uri>
           </mesh>
         </geometry>

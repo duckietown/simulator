@@ -20,7 +20,7 @@
         <geometry>
           <mesh>
             <uri>model://duck/meshes/model.dae</uri>
-            <scale>1 1 1</scale>
+            <scale>0.08333 0.08333 0.08333</scale>
           </mesh>
         </geometry>
       </collision>
@@ -28,7 +28,7 @@
         <geometry>
           <mesh>
             <uri>model://duck/meshes/model.dae</uri>
-            <scale>1 1 1</scale>
+            <scale>0.08333 0.08333 0.08333</scale>
           </mesh>
         </geometry>
       </visual>
