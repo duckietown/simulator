@@ -7,15 +7,23 @@ With this folder, you can run duckietown environment and control robot with gaze
 Requirements:
 - Python 2
 - ROS Kinetic
-- Gazebo 7
+- Gazebo 7 (*not Gazebo 8!*)
 
 **NOTE:  To build successfully, maybe you need to install a lot ros packages. Based on the error message, use ```sudo apt-get install ros-kinetic-packagename```.**
 
-**TODO: add dependencies, apt-get command with full list of necessary packages.**
+**TODO: complete the list of depencencies to install.**
 
 ```
-sudo apt-get install python-catkin-tools
-pip install catkin_pkg
+sudo apt-get install \
+ros-kinetic-xacro
+
+# Python packages
+pip install \
+catkin_pkg \
+catkin-tools \
+defusedxml \
+pyzmq \
+rospkg
 ```
 
 ## Build and run duckietown environment with a duckiebot
