@@ -30,7 +30,7 @@ def main():
         elif symbol == key.DOWN:
             print('back')
             action = (-1, -1)
-        elif symbol == key.ESCAPE:
+        else:
             return
 
         obs, reward, done, info = env.step(action)
