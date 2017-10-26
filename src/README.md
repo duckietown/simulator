@@ -16,7 +16,7 @@ cd ..
 ```
 You will see a Duckiebot in Duckietown now.
 
-In gazebo, shortcut "Ctrl+T" can call out "Gazebo: Topic Selector" window. Then click topi ```/gazebo/default/mybot/chassis/camera1/image```under ```gazebo.msgs.ImageStamped```, a camera window of dockiebot will show up.
+In gazebo, shortcut "Ctrl+T" can call out "Gazebo: Topic Selector" window. Then click topic ```/gazebo/default/mybot/chassis/camera1/image```under ```gazebo.msgs.ImageStamped```, a camera window of dockiebot will show up.
 
 You can also control robot through publish messege to topic with command ```rostopic pub /cmd_vel geometry_msgs/Twist "linear:
   x: 0.2
