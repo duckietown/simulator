@@ -46,11 +46,16 @@ while True:
 
     # TODO: fill in this data
     # Send world position data, etc
-    # The Gym client needs this to craft a reward function
+    # Note: the Gym client needs this to craft a reward function
     socket.send_json(
         {
+            # XYZ position
             "position": [0, 0, 0],
+
+            # Are we properly sitting inside our lane?
             "inside_lane": True,
+
+            # Are we colliding with a building or other car?
             "colliding": False,
         },
         flags=zmq.SNDMORE

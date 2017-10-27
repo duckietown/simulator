@@ -8,7 +8,6 @@ import zmq
 import pyglet
 from pyglet.image import ImageData
 from pyglet.gl import glPushMatrix, glPopMatrix, glScalef, glTranslatef
-from pyglet.text import Label
 
 # Rendering window size
 WINDOW_SIZE = 512
@@ -66,8 +65,19 @@ class DuckietownEnv(gym.Env):
         # For rendering
         self.window = None
 
+        # For displaying text
+        self.textLabel = pyglet.text.Label(
+            font_name="Arial",
+            font_size=14,
+            x = 5,
+            y = WINDOW_SIZE - 19
+        )
+
+        # Last received state data
+        self.stateData = None
+
         # Last received image
-        self.lastImg = None
+        self.img = None
 
         # Connect to the Gym bridge ROS node
         context = zmq.Context()
@@ -85,14 +95,14 @@ class DuckietownEnv(gym.Env):
         # Tell the server to reset the simulation
         self.socket.send_json({ "command":"reset" })
 
-        # Receive world data (position, etc)
-        worldData = self.socket.recv_json()
+        # Receive state data (position, etc)
+        self.stateData = self.socket.recv_json()
 
         # Receive a camera image from the server
-        self.lastImg = recvArray(self.socket)
+        self.img = recvArray(self.socket)
 
         # Return first observation
-        return self.lastImg
+        return self.img
 
     def _seed(self, seed=None):
         """
@@ -117,28 +127,28 @@ class DuckietownEnv(gym.Env):
             "values": action
         })
 
-        # Receive world data (position, etc)
-        worldData = self.socket.recv_json()
+        # Receive state data (position, etc)
+        self.stateData = self.socket.recv_json()
 
         # Receive a camera image from the server
-        self.lastImg = recvArray(self.socket)
+        self.img = recvArray(self.socket)
 
         # TODO: figure out what the reward should be based on world data
         reward = 0
         done = False
-        if worldData['inside_lane'] == False:
+        if self.stateData['inside_lane'] == False:
             reward = -1
-        if worldData['colliding'] == True:
+        if self.stateData['colliding'] == True:
             reward = -2
 
         if self.stepCount >= self.maxSteps:
             done = True
 
-        return self.lastImg, reward, done, worldData
+        return self.img, reward, done, self.stateData
 
     def _render(self, mode='human', close=False):
         if mode == 'rgb_array':
-            return self.lastImg
+            return self.img
 
         if close:
             if self.window:
@@ -152,19 +162,27 @@ class DuckietownEnv(gym.Env):
         self.window.switch_to()
         self.window.dispatch_events()
 
+        if self.stateData is None:
+            return
+
         # Draw the image to the rendering window
-        width = self.lastImg.shape[0]
-        height = self.lastImg.shape[1]
+        width = self.img.shape[0]
+        height = self.img.shape[1]
         imgData = ImageData(
             width,
             height,
             'RGB',
-            self.lastImg.data.__str__()
+            self.img.data.__str__()
         )
         glPushMatrix()
         glTranslatef(0, WINDOW_SIZE, 0)
         glScalef(1, -1, 1)
         imgData.blit(0, 0, 0, WINDOW_SIZE, WINDOW_SIZE)
         glPopMatrix()
+
+        # Display position/state information
+        pos = self.stateData['position']
+        self.textLabel.text = "(%.2f, %.2f, %.2f)" % (pos[0], pos[1], pos[2])
+        self.textLabel.draw()
 
         self.window.flip()
