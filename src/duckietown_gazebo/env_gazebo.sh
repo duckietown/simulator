@@ -1,3 +1,0 @@
-#!/bin/bash
-export GAZEBO_MODEL_PATH=${PWD}/models:${GAZEBO_MODEL_PATH}
-export GAZEBO_PLUGIN_PATH=${PWD}${GAZEBO_PLUGIN_PATH}
