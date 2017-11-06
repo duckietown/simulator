@@ -66,6 +66,7 @@ Start the duckietown environment:
 
     cd duckietown/
     source environment.sh
+    source catkin_ws/devel/setup.bash
     
 Then load the additional Gazebo parameters:
 
