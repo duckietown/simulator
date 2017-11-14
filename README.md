@@ -73,9 +73,13 @@ Then load the additional Gazebo parameters:
     cd catkin_ws/src/duckietown-sim-server/
     cd duckietown_gazebo && source env_gazebo.sh && cd -
     
-Start the Gazebo simulator:
+Start the Gazebo simulator (with graphical output):
 
     ./run_gazebo.sh
+    
+OR start Gazebo headlessly (without GUI, but faster):
+
+    roslaunch duckietown_gazebo duckietown.launch headless:=true gui:=false
     
 You should wait for a few seconds to see Gazebo load the duckietown model.
  
